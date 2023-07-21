@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_HUB_CREDENTIALS = '46b75b2c-e955-46dc-8536-db853a09ad43'
+        DOCKER_HUB_CREDENTIALS = 'surya_docker'
         DOCKER_IMAGE_NAME = 'surya2126/jenkinsprep'
         DOCKER_IMAGE_TAG = "latest-${env.BUILD_NUMBER}"
         GIT_URL = 'https://github.com/dhanush2126/jenkinsdemo.git'
