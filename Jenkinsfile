@@ -9,7 +9,7 @@ pipeline {
     }
     
     stages {
-         stage('Checkout') {
+         stage('cloning git url') {
             steps {
                 git url: "${GIT_URL}"
             }
