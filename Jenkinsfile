@@ -40,5 +40,19 @@ pipeline {
                 }
             }
         }
+        stage('Pulling docker image') {
+            steps {
+                script {
+                    sh "docker pull ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
+                }
+            }
+        }
+        stage('create a container') {
+            steps {
+                script {
+                    sh "docker run -itd ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} /bin/bash"
+                }
+            }
+        }
     }
 }
